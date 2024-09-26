@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Dívida: Departamento de Receitas Imobiliparias</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Calculadora de Dívida</h1>
+
+    <!-- Formulário de Inscrição -->
+    <form id="calculadoraForm">
+        <label for="inscricao">Inscrição Imobiliária:</label>
+        <input type="text" id="inscricao" placeholder="Por Exemplo: 01.001.142.0012.001" required>
+
+        <label for="tributo">Tributo:</label>
+        <input type="text" id="tributo" required>
+
+        <label for="dataInicial">Data Inicial do Tributo:</label>
+        <input type="date" id="dataInicial" required>
+
+        <label for="tipoAnalise">Tipo de Análise:</label>
+        <select id="tipoAnalise">
+            <option value="selecione">Selecione a Análise</option> 
+            <option value="judicial">Análise Judicial</option>
+            <option value="prescricao">Análise Para Prescrição</option>
+            <option value="revisao">Análise Para Revisão</option>
+        </select>
+
+        <h2>Valores para o Cálculo</h2>
+        <label for="itu">Imposto Territorial Urbano (ITU):</label>
+        <input type="number" id="itu" step="0.00001" required>
+
+        <label for="ipu">Imposto Predial Urbano (IPU):</label>
+        <input type="number" id="ipu" step="0.00001" required>
+
+        <label for="valorPago">Valor Pago (Durante o Exercício Normal):</label>
+        <input type="number" id="valorPago" step="0.00001" required>
+
+        <label for="primeiraParcela">Valor da Primeira Parcela Paga:</label>
+        <input type="number" id="primeiraParcela" step="0.00001" required>
+
+        <label for="ultimaParcela">Valor da Última Parcela Paga:</label>
+        <input type="number" id="ultimaParcela" step="0.00001" required>
+
+        <!-- Itens adicionais -->
+        <label for="combateIncendio">Combate a Incêndio:</label>
+        <input type="number" id="combateIncendio" step="0.00001" required>
+
+        <label for="coletaLixo">Coleta de Lixo:</label>
+        <input type="number" id="coletaLixo" step="0.00001" required>
+
+        <label for="preservacaoVias">Preservação de Vias Públicas:</label>
+        <input type="number" id="preservacaoVias" step="0.00001" required>
+
+        <h2>Tabelas de Dívida Não Misturada ou Não Misturada</h2>
+        <div id="tabelaDividaNaoMisturada">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data do Parcelamento</th>
+                        <th>Valor da Primeira Parcela</th>
+                        <th>Valor da Última Parcela</th>
+                        <th>Valor Parcial Pago</th>
+                        <th>Parcelas Pagas</th>
+                        <th>Saldo Remanescente</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Linhas repetidas conforme necessário -->
+                    <tr>
+                        <td><input type="date"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number"></td>
+                        <td><input type="number" step="0.00001"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><input type="date"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number"></td>
+                        <td><input type="number" step="0.00001"></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="date"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number"></td>
+                        <td><input type="number" step="0.00001"></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="date"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number"></td>
+                        <td><input type="number" step="0.00001"></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="date"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number"></td>
+                        <td><input type="number" step="0.00001"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><input type="date"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number"></td>
+                        <td><input type="number" step="0.00001"></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="date"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number"></td>
+                        <td><input type="number" step="0.00001"></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="date"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number"></td>
+                        <td><input type="number" step="0.00001"></td>
+                    </tr>
+
+
+                    <tr>
+                        <td><input type="date"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number"></td>
+                        <td><input type="number" step="0.00001"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><input type="date"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number"></td>
+                        <td><input type="number" step="0.00001"></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="date"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number"></td>
+                        <td><input type="number" step="0.00001"></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="date"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number"></td>
+                        <td><input type="number" step="0.00001"></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="date"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number"></td>
+                        <td><input type="number" step="0.00001"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><input type="date"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number"></td>
+                        <td><input type="number" step="0.00001"></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="date"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number"></td>
+                        <td><input type="number" step="0.00001"></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="date"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number"></td>
+                        <td><input type="number" step="0.00001"></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="date"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number"></td>
+                        <td><input type="number" step="0.00001"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><input type="date"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number"></td>
+                        <td><input type="number" step="0.00001"></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="date"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number"></td>
+                        <td><input type="number" step="0.00001"></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="date"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number"></td>
+                        <td><input type="number" step="0.00001"></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="date"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number"></td>
+                        <td><input type="number" step="0.00001"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><input type="date"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number"></td>
+                        <td><input type="number" step="0.00001"></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="date"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number"></td>
+                        <td><input type="number" step="0.00001"></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="date"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number" step="0.00001"></td>
+                        <td><input type="number"></td>
+                        <td><input type="number" step="0.00001"></td>
+                    </tr>
+
+                    <!-- Repita até ter 23 linhas -->
+                </tbody>
+            </table>
+        </div>
+
+        <button type="button" id="calcularBtn">Calcular</button>
+        <button type="reset">Limpar</button>
+    </form>
+
+    <table id="resultadoTabela" style="display:none;">
+        <thead>
+            <tr>
+                <th>Descrição</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Os resultados serão inseridos aqui -->
+        </tbody>
+    </table>
+    
+
+    <script src="script.js"></script>
+
+    <center>
+        <i>
+    <footer>
+
+        <p>Site desenvolvido por Juliano <img src="https://d1yei2z3i6k35z.cloudfront.net/6946809/65e45ac72773e_zanoni.1.png" alt="Logo de Juliano Zanoni"></p>
+
+    </footer>
+    </i>
+</center>
+</body>
+</html>
